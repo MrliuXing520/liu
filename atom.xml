@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laustar.fun/"/>
-  <updated>2019-10-06T02:08:35.000Z</updated>
+  <updated>2020-04-19T10:10:41.912Z</updated>
   <id>https://laustar.fun/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo渲染</title>
+    <link href="https://laustar.fun/posts/HexoRendering.html"/>
+    <id>https://laustar.fun/posts/HexoRendering.html</id>
+    <published>2020-04-19T10:06:05.000Z</published>
+    <updated>2020-04-19T10:10:41.912Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note info no-iconc"><p>有的时候想要放点私货。直接放在source文件夹下面吧，会被Hexo渲染掉。直接放在public文件下面，每次执行完hexo clean又什么都没了。这时候我们就需要跳过指定文件的渲染了。废话不多说直接上干货。</p></div><h4 id="跳过单文件"><a href="#跳过单文件" class="headerlink" title="跳过单文件"></a>跳过单文件</h4><p>如果要跳过source文件夹下的test.html，可以这样配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: test.html</span><br></pre></td></tr></table></figure><p>or</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: [test.html]</span><br></pre></td></tr></table></figure><blockquote><p>注意，千万不要写成/test.html，这里只能填相对于source文件夹的相对路径。</p></blockquote><h4 id="跳过多文件"><a href="#跳过多文件" class="headerlink" title="跳过多文件"></a>跳过多文件</h4><p>1、如果要忽略source下的test文件夹下所有文件，可以这样配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: test/*</span><br></pre></td></tr></table></figure><p>or</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: [test/*]</span><br></pre></td></tr></table></figure><p>2、如果要忽略source下的test文件夹下.html文件，可以这样配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: test/*.html</span><br></pre></td></tr></table></figure><p>or</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: [test/*.html]</span><br></pre></td></tr></table></figure><p>3、如果要忽略source下的test文件夹下所有文件和目录，可以这样配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: test/**</span><br></pre></td></tr></table></figure><p>or</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: [test/**]</span><br></pre></td></tr></table></figure><p>4、如果要忽略多个路径的文件或目录，可以这样配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">skip_render:</span><br><span class="line">    - test.html</span><br><span class="line">    - <span class="string">'*.html'</span></span><br><span class="line">    - test/**</span><br><span class="line">    - test/*</span><br></pre></td></tr></table></figure><p>or</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: [test.html, <span class="string">'*.html'</span>, test/**, test/*]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;note info no-iconc&quot;&gt;&lt;p&gt;有的时候想要放点私货。直接放在source文件夹下面吧，会被Hexo渲染掉。直接放在public文件下面，每次执行完hexo clean又什么都没了。这时候我们就需要跳过指定文件的渲染了。废话不多说直接上干货。
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://laustar.fun/categories/hexo/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>设置网站运行时间</title>
