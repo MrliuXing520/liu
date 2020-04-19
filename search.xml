@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo渲染]]></title>
+    <title><![CDATA[Hexo渲染]]></title>
     <url>%2Fposts%2FHexoRendering.html</url>
     <content type="text"><![CDATA[有的时候想要放点私货。直接放在source文件夹下面吧，会被Hexo渲染掉。直接放在public文件下面，每次执行完hexo clean又什么都没了。这时候我们就需要跳过指定文件的渲染了。废话不多说直接上干货。 跳过单文件如果要跳过source文件夹下的test.html，可以这样配置： 1skip_render: test.html or 1skip_render: [test.html] 注意，千万不要写成/test.html，这里只能填相对于source文件夹的相对路径。 跳过多文件1、如果要忽略source下的test文件夹下所有文件，可以这样配置： 1skip_render: test/* or 1skip_render: [test/*] 2、如果要忽略source下的test文件夹下.html文件，可以这样配置： 1skip_render: test/*.html or 1skip_render: [test/*.html] 3、如果要忽略source下的test文件夹下所有文件和目录，可以这样配置： 1skip_render: test/** or 1skip_render: [test/**] 4、如果要忽略多个路径的文件或目录，可以这样配置： 12345skip_render: - test.html - '*.html' - test/** - test/* or 1skip_render: [test.html, '*.html', test/**, test/*]]]></content>
       <categories>
-        <category>hexo</category>
+        <category>HEXO</category>
       </categories>
   </entry>
   <entry>
