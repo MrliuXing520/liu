@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java Swing 限制JTextField输入类型]]></title>
+    <url>%2Fposts%2FJava%2FJava%20Swing.html</url>
+    <content type="text"><![CDATA[在Java Swing中有时候想去限制JTextField输入框的一些内容时，很多时候会用正则表达式去判断条件，这也确实是比较通用和正规的一种方式，但是有时候为了方便我们也会选择其他的一些方式，下面就是小编给大家整理的两种新的方式，感兴趣的小伙伴们可以去试试哟！ 限制输入数字123456789101112class IntegerDocument extends PlainDocument&#123; public void insertString(int offset, String s, AttributeSet attributeSet) throws BadLocationException&#123; try&#123; Integer.parseInt(s); &#125; catch (Exception ex)&#123; Toolkit.getDefaultToolkit().beep(); return; &#125; super.insertString(offset, s, attributeSet); &#125;&#125; 提示：调用方法textfield.setDocument(new IntegerDocument());。 限制输入数字和长度12345678910111213141516171819202122public class NumberLenghtLimitedDmt extends PlainDocument &#123; private int limit; public NumberLenghtLimitedDmt(int limit) &#123; super(); this.limit = limit; &#125; public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException &#123; if (str == null) &#123; return; &#125; if ((getLength() + str.length()) &lt;= limit) &#123; char[] upper = str.toCharArray(); int length = 0; for (int i = 0; i &lt; upper.length; i++) &#123; if (upper[i] &gt;= '0' &amp;&amp; upper[i] &lt;= '9') &#123; upper[length++] = upper[i]; &#125; &#125; super.insertString(offset, new String(upper, 0, length), attr); &#125; &#125;&#125; 提示：调用方法如下JTextField text=new JTextField(); text.setDocument(new NumberLenghtLimitedDmt(7));那么这个文本框只能输入7位而且是只能是数字!!! 通过上面的两种方法就可以直接限制Swing中的输入框的问题，不用去正则表达式来判断啦！]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo渲染]]></title>
     <url>%2Fposts%2FHexoRendering.html</url>
     <content type="text"><![CDATA[有的时候想要放点私货。直接放在source文件夹下面吧，会被Hexo渲染掉。直接放在public文件下面，每次执行完hexo clean又什么都没了。这时候我们就需要跳过指定文件的渲染了。废话不多说直接上干货。 跳过单文件如果要跳过source文件夹下的test.html，可以这样配置： 1skip_render: test.html or 1skip_render: [test.html] 注意，千万不要写成/test.html，这里只能填相对于source文件夹的相对路径。 跳过多文件1、如果要忽略source下的test文件夹下所有文件，可以这样配置： 1skip_render: test/* or 1skip_render: [test/*] 2、如果要忽略source下的test文件夹下.html文件，可以这样配置： 1skip_render: test/*.html or 1skip_render: [test/*.html] 3、如果要忽略source下的test文件夹下所有文件和目录，可以这样配置： 1skip_render: test/** or 1skip_render: [test/**] 4、如果要忽略多个路径的文件或目录，可以这样配置： 12345skip_render: - test.html - '*.html' - test/** - test/* or 1skip_render: [test.html, '*.html', test/**, test/*]]]></content>
@@ -29,7 +37,7 @@
   </entry>
   <entry>
     <title><![CDATA[用记事本编写第一个 java 程序]]></title>
-    <url>%2Fposts%2Fjava.html</url>
+    <url>%2Fposts%2FJava%2Fjava.html</url>
     <content type="text"><![CDATA[之所以用记事本来写不是为了装X或者什么的。反而恰恰是返璞归真，因为在用java语言进行程序开发时，首先是以纯文本的方式编写所有的java源程序，并保存成以.java为后缀的文件；然后将这些源程序用javac编译成.class后缀名的字节代码文件；字节代码不是被本地处理器执行的代码，而是能够被java虚拟机（JVM）执行的代码。最后用java运行工具在JVM执行java应用程序。 由于JVM可以运行在不同的操作系统上，因此同一个字节代码文件可以跨平台运行。 javac java 环境JDKJDK为Java编辑的最基本的环境，安装就不多介绍了，不会的看百度官方教程， JDK环境下载点击此处 编写 java用记事本编辑java文件，并且把后缀改成.java，文件名和类名要一样。 12345public class HelloWorld&#123; public static void main(String[] args)&#123; System.out.println("Hello World!"); &#125;&#125; 输出结果如下：]]></content>
       <categories>
         <category>java</category>
