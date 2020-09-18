@@ -12,6 +12,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Linux配置JDK环境]]></title>
+    <url>%2Fposts%2Fjdk.html</url>
+    <content type="text"><![CDATA[JDK是 Java 语言的软件开发工具包，主要用于移动设备、嵌入式设备上的java应用程序。JDK是整个java开发的核心，它包含了JAVA的运行环境（JVM+Java系统类库）和JAVA工具。很多人只会在Windows系统中配置JDK环境，Linux该如何配置呢？看看这篇教程吧！ 配置JDK1、 官网下载JDK 2、解压 解压步骤就不详细讲解了，非常简单，可以在Linux中解压，也可以通过上传虚拟机在线解压。 3、配置Jdk 使用vi命令进入/etc/profile文件进行添加如下配置 1234export JAVA_HOME=/usr/local/java/jdk1.8.0_261export JRE_HOME=/usr/local/java/jdk1.8.0_261/jreexport CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATHexport PATH= $JAVA_HOME/bin: $JRE_HOME/bin:$PATH 4、生效JDK配置 source /etc/profile 5、查看JDK 输入 java-version 出现如下界面则配置成功]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Jdk</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java Swing 限制JTextField输入类型]]></title>
     <url>%2Fposts%2FJava%2FJava%20Swing.html</url>
     <content type="text"><![CDATA[在Java Swing中有时候想去限制JTextField输入框的一些内容时，很多时候会用正则表达式去判断条件，这也确实是比较通用和正规的一种方式，但是有时候为了方便我们也会选择其他的一些方式，下面就是小编给大家整理的两种新的方式，感兴趣的小伙伴们可以去试试哟！ 限制输入数字123456789101112class IntegerDocument extends PlainDocument&#123; public void insertString(int offset, String s, AttributeSet attributeSet) throws BadLocationException&#123; try&#123; Integer.parseInt(s); &#125; catch (Exception ex)&#123; Toolkit.getDefaultToolkit().beep(); return; &#125; super.insertString(offset, s, attributeSet); &#125;&#125; 提示：调用方法textfield.setDocument(new IntegerDocument());。 限制输入数字和长度12345678910111213141516171819202122public class NumberLenghtLimitedDmt extends PlainDocument &#123; private int limit; public NumberLenghtLimitedDmt(int limit) &#123; super(); this.limit = limit; &#125; public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException &#123; if (str == null) &#123; return; &#125; if ((getLength() + str.length()) &lt;= limit) &#123; char[] upper = str.toCharArray(); int length = 0; for (int i = 0; i &lt; upper.length; i++) &#123; if (upper[i] &gt;= '0' &amp;&amp; upper[i] &lt;= '9') &#123; upper[length++] = upper[i]; &#125; &#125; super.insertString(offset, new String(upper, 0, length), attr); &#125; &#125;&#125; 提示：调用方法如下JTextField text=new JTextField(); text.setDocument(new NumberLenghtLimitedDmt(7));那么这个文本框只能输入7位而且是只能是数字!!! 通过上面的两种方法就可以直接限制Swing中的输入框的问题，不用去正则表达式来判断啦！]]></content>
