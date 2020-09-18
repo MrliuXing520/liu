@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习,">
 
 
 
@@ -96,16 +96,21 @@
 
 
 
-<meta name="description" content="不忘初心，方得始终。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lau-Star">
-<meta property="og:url" content="https://laustar.fun/categories/HEXO/index.html">
+<meta name="description" content="Hadoop是一个由Apache基金会所开发的分布式系统基础架构。Hadoop是一个能够对大量数据进行分布式处理的软件框架，Hadoop 以一种可靠、高效、可伸缩的方式进行数据处理搭建Hadoop框架首先要配置JDK环境，其次是Hadoop的相关配置。">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7.5服务器搭建Hadoop">
+<meta property="og:url" content="https://laustar.fun/posts/hadoop.html">
 <meta property="og:site_name" content="Lau-Star">
-<meta property="og:description" content="不忘初心，方得始终。">
+<meta property="og:description" content="Hadoop是一个由Apache基金会所开发的分布式系统基础架构。Hadoop是一个能够对大量数据进行分布式处理的软件框架，Hadoop 以一种可靠、高效、可伸缩的方式进行数据处理搭建Hadoop框架首先要配置JDK环境，其次是Hadoop的相关配置。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2020/09/18/Dcdo1qj9Z6RsfUV.png">
+<meta property="og:image" content="https://i.loli.net/2020/09/18/iPlqufcH8dMSrxv.jpg">
+<meta property="og:updated_time" content="2020-09-18T04:17:11.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lau-Star">
-<meta name="twitter:description" content="不忘初心，方得始终。">
+<meta name="twitter:title" content="Centos7.5服务器搭建Hadoop">
+<meta name="twitter:description" content="Hadoop是一个由Apache基金会所开发的分布式系统基础架构。Hadoop是一个能够对大量数据进行分布式处理的软件框架，Hadoop 以一种可靠、高效、可伸缩的方式进行数据处理搭建Hadoop框架首先要配置JDK环境，其次是Hadoop的相关配置。">
+<meta name="twitter:image" content="https://i.loli.net/2020/09/18/Dcdo1qj9Z6RsfUV.png">
 
 
 
@@ -135,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="https://laustar.fun/categories/HEXO/">
+  <link rel="canonical" href="https://laustar.fun/posts/hadoop.html">
 
 
 
 
 
-  <title>分类: HEXO | Lau-Star</title>
+  <title>Centos7.5服务器搭建Hadoop | Lau-Star</title>
   
 
 
@@ -160,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/MrliuXing520" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -369,161 +374,284 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>HEXO<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://laustar.fun/posts/hadoop.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lau">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lau-Star">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/posts/HexoRendering.html" itemprop="url">
-              
-                <span itemprop="name">Hexo渲染</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Centos7.5服务器搭建Hadoop</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-04-19T18:06:05+08:00" content="2020-04-19">
-          04-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-18T12:12:45+08:00">
+                2020-09-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">Hadoop</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/hadoop.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/hadoop.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  498 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/posts/Hexo/Hexo0004.html" itemprop="url">
-              
-                <span itemprop="name">hexo常用指令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-13T16:29:46+08:00" content="2019-09-13">
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <div class="note info no-iconc"><p>Hadoop是一个由Apache基金会所开发的分布式系统基础架构。Hadoop是一个能够对大量数据进行分布式处理的软件框架，Hadoop 以一种可靠、高效、可伸缩的方式进行数据处理搭建Hadoop框架首先要配置JDK环境，其次是Hadoop的相关配置。</p></div>
+<a id="more"></a> 
+<h4 id="JDK的配置"><a href="#JDK的配置" class="headerlink" title="JDK的配置"></a>JDK的配置</h4><h4 id="Hadoop配置"><a href="#Hadoop配置" class="headerlink" title="Hadoop配置"></a>Hadoop配置</h4><p>1、<a href="http://hadoop.apache.org" target="_blank" rel="noopener">Hadoop下载</a></p>
+<blockquote>
+<p>wget  <a href="https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz</a></p>
+</blockquote>
+<p>2、解压Hadoop压缩包</p>
+<blockquote>
+<p>tar zxvf hadoop-3.1.4</p>
+</blockquote>
+<p>3、修改<code>etc/hadoop/core-site.xml</code>文件配置</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">	&lt;!--  --&gt;</span><br><span class="line">	&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs:<span class="comment">//localhost:9000&lt;/value&gt;</span></span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">	&lt;!-- 缓存存储路径 --&gt;</span><br><span class="line">	&lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/app/hadooptemp&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>4、修改<code>etc/hadoop/hdfs-site.xml</code>文件配置</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">	&lt;!-- 默认为<span class="number">3</span>，由于是单机，所以配置<span class="number">1</span> --&gt;</span><br><span class="line">	&lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;1&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">	&lt;!-- 配置http访问地址 --&gt;</span><br><span class="line">	&lt;property&gt;</span><br><span class="line">	  &lt;name&gt;dfs.http.address&lt;/name&gt;</span><br><span class="line">	  &lt;value&gt;0.0.0.0:9870&lt;/value&gt;</span><br><span class="line">	&lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/posts/VisualStudioCode.html" itemprop="url">
-              
-                <span itemprop="name">Visual Studio Code隐藏目录解决方案</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-19T13:56:51+08:00" content="2019-08-19">
-          08-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/posts/Hexo/Hexo0003.html" itemprop="url">
-              
-                <span itemprop="name">Hexo 多终端同步</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-18T18:13:47+08:00" content="2019-08-18">
-          08-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/posts/Hexo/Hexo0002.html" itemprop="url">
-              
-                <span itemprop="name">HEXO NEXT主题美化</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-13T11:42:33+08:00" content="2019-08-13">
-          08-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+<p>5、修改<code>etc/hadoop/hadoop-env.sh</code>文件配置</p>
+<blockquote>
+<p>export JAVA_HOME=/usr/local/java/jdk1.8.0_151</p>
+</blockquote>
+<p>注：JAVA_HOME配置自己JDK的所在路径</p>
+<p>6、修改<code>etc/hadoop/yarn-env.sh</code>文件配置</p>
+<blockquote>
+<p>export JAVA_HOME=/usr/local/java/jdk1.8.0_151</p>
+</blockquote>
+<p>注：JAVA_HOME配置自己JDK的所在路径</p>
+<p>7、修改<code>sbin/stop-dfs.sh</code>文件配置(<em>顶部添加</em>)</p>
+<blockquote>
+<p>HDFS_DATANODE_USER=root<br>HDFS_DATANODE_SECURE_USER=hdfs<br>HDFS_NAMENODE_USER=root<br>HDFS_SECONDARYNAMENODE_USER=root</p>
+</blockquote>
+<p>8、修改<code>sbin/start-dfs.sh</code>文件配置(<em>顶部添加</em>)</p>
+<blockquote>
+<p>HDFS_DATANODE_USER=root<br>HDFS_DATANODE_SECURE_USER=hdfs<br>HDFS_NAMENODE_USER=root<br>HDFS_SECONDARYNAMENODE_USER=root</p>
+</blockquote>
+<p>9、格式化Hadoop(<em>sbin目录下</em>)</p>
+<blockquote>
+<p>./hdfs namenode -format</p>
+</blockquote>
+<p>10、启动Hadoop(<em>sbin目录下</em>)</p>
+<blockquote>
+<p>./start-dfs.sh</p>
+</blockquote>
+<p>11、浏览器输入<code>你的ip:9870</code>出现以下界面则搭建成功<br><img src="https://i.loli.net/2020/09/18/Dcdo1qj9Z6RsfUV.png" alt="enter image description here"></p>
+<h4 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h4><p>1、如果在搭建过程中出现以下问题<br><img src="https://i.loli.net/2020/09/18/iPlqufcH8dMSrxv.jpg" alt="enter image description here"><br>解决办法如下：<br>在<code>start-dfs.sh</code>和<code>stop-dfs.sh</code>两个文件夹中添加如下配置</p>
+<blockquote>
+<p>   #!/usr/bin/env bash<br>HDFS_DATANODE_USER=root<br>HADOOP_SECURE_DN_USER=hdfs<br>HDFS_NAMENODE_USER=root<br>HDFS_SECONDARYNAMENODE_USER=root</p>
+</blockquote>
+<p>在<code>start-yarn.sh</code>和<code>stop-yarn.sh</code>两个文件夹中添加如下配置</p>
+<blockquote>
+<p>  #!/usr/bin/env bash<br>YARN_RESOURCEMANAGER_USER=root<br>HADOOP_SECURE_DN_USER=yarn<br>YARN_NODEMANAGER_USER=root</p>
+</blockquote>
+<p>重新开始start</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Lau
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://laustar.fun/posts/hadoop.html" title="Centos7.5服务器搭建Hadoop">https://laustar.fun/posts/hadoop.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/Java/Java Swing.html" rel="next" title="Java Swing 限制JTextField输入类型">
+                <i class="fa fa-chevron-left"></i> Java Swing 限制JTextField输入类型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/categories/HEXO/page/2/">2</a><a class="extend next" rel="next" href="/categories/HEXO/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -531,6 +659,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -551,8 +686,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -655,6 +799,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK的配置"><span class="nav-number">1.</span> <span class="nav-text">JDK的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hadoop配置"><span class="nav-number">2.</span> <span class="nav-text">Hadoop配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可能遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">可能遇到的问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -836,6 +996,10 @@ setInterval("createtime()",250);
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
